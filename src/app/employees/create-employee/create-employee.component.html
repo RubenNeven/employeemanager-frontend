@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group row">
+      <label class="col-md-2 col-form-label" for="name">Name</label>
+      <div class="col-md-10">
+        <input type="text" formControlName="name" class="form-control" id="name" placeholder="Name" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 col-form-label" for="email">Email Address</label>
+      <div class="col-md-10">
+        <input type="email" formControlName="email"  class="form-control" id="email" placeholder="Email" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 col-form-label" for="phone">Job title</label>
+      <div class="col-md-10">
+        <input type="text" formControlName="jobTitle"  class="form-control" id="jobTile" placeholder="Job title" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 col-form-label" for="phone">Phone</label>
+      <div class="col-md-10">
+        <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Phone" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 col-form-label" for="phone">Image URL</label>
+      <div class="col-md-10">
+        <input type="text" formControlName="imageUrl"  class="form-control" id="imageUrl" placeholder="Image URL" required>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button [routerLink]="['../']" type="button" id="add-employee-form" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+  </form>
+</div>
